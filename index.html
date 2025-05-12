@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>IndexedDB with Search, Sort, Pagination</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h2>IndexedDB Table with Search, Sort, Pagination</h2>
+
+  <div>
+    <input type="text" id="searchInput" placeholder="Search by name..." oninput="renderTable()">
+    <input type="text" id="nameInput" placeholder="New record name">
+    <button onclick="addRecord()">Add</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th onclick="changeSort('id')">ID</th>
+        <th onclick="changeSort('name')">Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <div class="pagination" id="paginationControls"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
